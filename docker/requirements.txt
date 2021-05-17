@@ -1,5 +1,1 @@
-pandas
-mordred
-pillow
-pubchempy
 jupyterlab

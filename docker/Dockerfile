@@ -1,12 +1,16 @@
-FROM informaticsmatters/rdkit-python3-debian:Release_2019_03_1
-USER 0
+FROM python:3.8.2-slim
+
 RUN apt-get update && \
-  apt-get install make -y && \
-  apt-get clean && \ 
-  rm -rf /var/lib/apt/lists/* &&\
+  apt-get install -y --no-install-recommends \
+  apt-utils \
+  gcc \
+  zsh \
+  build-essential && \
+  apt-get autoremove -y && \
+  apt-get clean -y && \ 
+  rm -rf /var/lib/apt/lists/* && \
   mkdir /code
 WORKDIR /code
 COPY requirements.txt /code/
 RUN pip --no-cache-dir install --upgrade setuptools && \
   pip --no-cache-dir install -r requirements.txt
-COPY . /code/
