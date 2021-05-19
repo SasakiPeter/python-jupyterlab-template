@@ -12,5 +12,5 @@ RUN apt-get update && \
   mkdir /code
 WORKDIR /code
 COPY requirements.txt /code/
-RUN pip --no-cache-dir install --upgrade setuptools && \
+RUN pip --no-cache-dir install --upgrade pip setuptools && \
   pip --no-cache-dir install -r requirements.txt
