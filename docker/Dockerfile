@@ -8,8 +8,7 @@ RUN apt-get update && \
   build-essential && \
   apt-get autoremove -y && \
   apt-get clean -y && \ 
-  rm -rf /var/lib/apt/lists/* && \
-  mkdir /code
+  rm -rf /var/lib/apt/lists/*
 WORKDIR /code
 COPY requirements.txt /code/
 RUN pip --no-cache-dir install --upgrade pip setuptools && \
