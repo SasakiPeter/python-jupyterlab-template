@@ -1,0 +1,17 @@
+**/__pycache__
+**/.ipynb_checkpoints
+**/.env
+**/.git
+**/.gitignore
+**/.svn
+**/.vscode
+**/node_modules
+**/build
+**/dist
+
+.devcontainer/
+data/
+docker/
+notebooks/
+src/
+README.md

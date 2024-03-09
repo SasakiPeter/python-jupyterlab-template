@@ -5,11 +5,14 @@ RUN apt-get update && \
   apt-utils \
   gcc \
   zsh \
+  git \
   build-essential && \
   apt-get autoremove -y && \
   apt-get clean -y && \ 
   rm -rf /var/lib/apt/lists/*
+
+RUN pip --no-cache-dir install --upgrade pip setuptools
+
 WORKDIR /code
 COPY requirements.txt /code/
-RUN pip --no-cache-dir install --upgrade pip setuptools && \
-  pip --no-cache-dir install -r requirements.txt
+RUN pip --no-cache-dir install -r requirements.txt

@@ -117,4 +117,6 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-
+/data
+.DS_Store
+.Trash-0/

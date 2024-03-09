@@ -1,0 +1,35 @@
+{
+  "name": "ML Development Environment",
+  "dockerComposeFile": "../compose.yml",
+  "service": "env",
+  "workspaceFolder": "/code",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "python.linting.enabled": true,
+        "python.linting.flake8Enabled": true,
+        "python.formatting.provider": "black",
+        "python.sortImports.args": [
+          "--profile",
+          "black"
+        ],
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+          "source.organizeImports": "explicit"
+        }
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.black-formatter",
+        "ms-python.isort"
+      ]
+    }
+  },
+  "forwardPorts": [
+    8888
+  ],
+  "postCreateCommand": "pip install flake8 black isort",
+  "remoteUser": "root"
+}
