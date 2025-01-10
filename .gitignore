@@ -120,3 +120,9 @@ dmypy.json
 /data
 .DS_Store
 .Trash-0/
+
+# Ignore all .png files in the notebooks folder and its subfolders
+notebooks/**/*.png
+
+# Ignore all .html files in the notebooks folder and its subfolders
+notebooks/**/*.html

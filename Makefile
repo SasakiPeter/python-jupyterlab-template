@@ -1,5 +1,5 @@
 test:
-		python -m unittest discover src/tests
+		python -m unittest discover pipeline/tests
 
 open-jupyter:
 	./scripts/open_jupyter.sh

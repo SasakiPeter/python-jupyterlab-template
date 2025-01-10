@@ -30,6 +30,6 @@
   "forwardPorts": [
     8888
   ],
-  "postCreateCommand": "pip install flake8 black isort",
+  "postCreateCommand": "pip install flake8 black isort && pip install -e .",
   "remoteUser": "root"
 }
