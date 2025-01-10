@@ -2,7 +2,7 @@
 
 __title__ = "python-jupyterlab-template"
 __description__ = "template for python-jupyterlab"
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 __author__ = "sasakipeter"
 __author_email__ = "anagentofthegod@gmail.com"
 __license__ = "Unlicense"
